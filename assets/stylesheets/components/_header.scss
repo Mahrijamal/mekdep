@@ -1,0 +1,105 @@
+.nav_menu {
+    width: 1440px;
+    margin: 0 auto;
+    background: rgb(14, 136, 136);
+    color: white;
+  
+      .content {
+        width: 98%;
+        margin: 0 auto;
+        @include flexBox(center, space-between);
+       
+        .right {
+          @include flexBox(center, center);
+          .lang {
+            margin-right: 40px;
+            .lang_btn {
+              &:not(:last-child) {
+                border-right: 2px solid gray;
+                padding-right: 12px;
+              }
+              &:last-child {
+                padding-left: 10px;
+              }
+            }
+          }
+  
+          .profile_login {
+            a {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+  
+  
+    .bottom {
+      padding: 10px 0 0 0;
+      border-bottom: 1px solid gray;
+      .content {
+        width: 98%;
+        margin: 0 auto;
+        
+        @include flexBox(center, space-between);
+        .logo {
+          p {
+            font-weight: 600;
+            font-size: 40px;
+          }
+        }
+  
+        ul {
+          @include flexBox(center, center);
+          list-style: none;
+  
+          li {
+            a {
+              display: inline-block;
+              padding: 15px 20px;
+              text-decoration: none;
+              color: white;
+              &:hover {
+                color: rgb(240, 247, 22);
+              }
+            }
+  
+            .dropdown {
+              display: none;
+            }
+          }
+  
+          li.settings {
+            position: relative;
+            display: inline-block;
+  
+            &:hover .settings_content {
+              display: block;
+            }
+  
+            .settings_content {
+              display: none;
+              position: absolute;
+              background-color: #f9f9f9;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+              z-index: 1;
+  
+              & li a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                &:hover {
+                  background: #f1f1f1;
+                }
+              }
+            }
+          }
+  
+          .active {
+            border-bottom: 2px solid blue;
+          }
+        }
+      }
+    }
+  }
+  
